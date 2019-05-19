@@ -104,7 +104,8 @@ public class Controller {
     
     @RequestMapping("/ram/clear")
     public RamResponse ramClear() {
-    	memory.clear();
+    	memory = new ArrayList<String>();
+    	System.gc();
     	return getRamInfo();
     }
     
